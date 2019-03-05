@@ -72,6 +72,7 @@
     
     width: 100px;
     height: 36px;
+    animation: go-right-left 60s infinite;
 }
 
 .ship_smokestack {
@@ -134,6 +135,7 @@
     border-radius: 50%;
     background: #ffcf11;
     box-shadow: 0 0 100px #ffdf05;
+    animation: sun 10s infinite;
 }
 
 .sun-wrapper {
@@ -143,6 +145,7 @@
     height: 100%;
     
     transform-origin: bottom center;
+    animation: sun 120s infinite;
 }
 
 .sun div {
@@ -156,42 +159,53 @@
     
     border: solid #ffcf11;
     border-width: 10px 0 10px 0;
+
+    
 }
 
 .sun div:nth-child(2) {
     transform: rotate(18deg);
+ 
 }
 
 .sun div:nth-child(3) {
     transform: rotate(36deg);
+   
 }
 
 .sun div:nth-child(4) {
     transform: rotate(54deg);
+   
 }
 
 .sun div:nth-child(5) {
     transform: rotate(72deg);
+    
 }
 
 .sun div:nth-child(6) {
     transform: rotate(90deg);
+    
 }
 
 .sun div:nth-child(7) {
     transform: rotate(-18deg);
+   
 }
 
 .sun div:nth-child(8) {
     transform: rotate(-36deg);
+    
 }
 
 .sun div:nth-child(9) {
     transform: rotate(-54deg);
+    
 }
 
 .sun div:nth-child(10) {
     transform: rotate(-72deg);
+    
 }
 
 .cloud {
@@ -233,6 +247,17 @@
 @keyframes go-left-right{
     0%{right: 0px;}
     100%{left: 110%;}
+}
+@keyframes go-right-left{
+    0%{left: 100%;}
+    100%{left: 0%;}
+}
+@keyframes sun{
+    0%{}
+    
+    100%{
+        transform: rotate(360deg);
+        }
 }
 .cloud-1 {
     top: 10px;
