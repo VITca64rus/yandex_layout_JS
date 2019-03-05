@@ -20,6 +20,7 @@
     
     background: skyblue;
     box-shadow: 0 -400px 300px -300px steelblue inset;
+    animation: day 120s infinite;
 }
 
 /*TODO
@@ -112,16 +113,19 @@
 .smoke-1 {
     top: -25px;
     right: 44px;
+    animation: smoke 2s infinite;
 }
 
 .smoke-2 {
     top: -25px;
     right: 42px;
+    animation: smoke 6s infinite;
 }
 
 .smoke-3 {
     top: -25px;
     right: 49px;
+    animation: smoke 12s infinite;
 }
 
 .sun {
@@ -250,13 +254,44 @@
 }
 @keyframes go-right-left{
     0%{left: 100%;}
-    100%{left: 0%;}
+    100%{left: -20%;}
 }
 @keyframes sun{
     0%{}
     
     100%{
         transform: rotate(360deg);
+        }
+}
+@keyframes smoke{
+    0%{}
+    25%{
+        transform: translateY(-5px) scale(1.3);
+        background-color: rgba(255,255,255,0.9);
+        }
+    50%{
+        transform: translateY(-15px) scale(1.7);
+        background-color: rgba(255,255,255,0.5);
+        }
+    100%{
+        transform: translateY(-20px) scale(2);
+        background-color: rgba(255,255,255,0.1);
+        }
+}
+@keyframes day{
+    0%{ background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;}
+    
+    25%{
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px orangered inset
+        }
+    50%{
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px transparent inset;
+        }
+    75%{background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;;
         }
 }
 .cloud-1 {
